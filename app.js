@@ -1,6 +1,6 @@
 const readlineSync = require('readline-sync')
 
-const stone = 1;
+const rock = 1;
 const paper = 2;
 const scissors = 3;
 let result = '';
