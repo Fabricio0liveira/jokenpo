@@ -5,37 +5,37 @@ const paper = 2;
 const scissors = 3;
 let result = '';
 
-console.log('Bem vindo ao jogo: Jokenpo! Os valores são relacionados aos objetos como, pedra = 1, papel = 2, tesoura = 3')
+console.log('Bem vindo ao jogo: Jokenpo! \n As opções são referenciadas por números. Pedra = 1, Papel = 2 e Tesoura = 3.')
 let playerOne = parseFloat(readlineSync.question('Jogador 1: '));
 let playerTwo = parseFloat(readlineSync.question('Jogador 2: '));
 
-function juizJokenpo(playerOne, playerTwo) {
+function judgeJokenpo(playerOne, playerTwo) {
     if(playerOne === 1 && playerTwo === 1) {
         result = 'Empate!'
     }else if(playerOne === 1 && playerTwo === 2) {
-        result = 'Jogador 2 vencedor!'
+        result = 'Jogador 2 venceu!'
     }else if(playerOne === 1 && playerTwo === 3) {
-        result = 'Jogador 1 vencedor!'
+        result = 'Jogador 1 venceu!'
     }
 
     if(playerOne === 2 && playerTwo === 2) {
         result = 'Empate!'
     }else if(playerOne === 2 && playerTwo === 3) {
-        result = 'Você perdeu!'
+        result = 'Jogador 2 venceu!'
     }else if(playerOne === 2 && playerTwo === 1) {
-        result = 'Você ganhou!'
+        result = 'Jogador 1 venceu!'
     }
 
     if(playerOne === 3 && playerTwo === 3) {
         result = 'Empate!'
     }else if(playerOne === 3 && playerTwo === 1) {
-        result = 'Você perdeu!'
+        result = 'Jogador 2 venceu!'
     }else if(playerOne === 3 && playerTwo === 2) {
-        result = 'Você ganhou!'
+        result = 'Jogador 1 venceu!'
     }
 
     return result; 
 }
 
-juizJokenpo(playerOne, playerTwo);
+judgeJokenpo(playerOne, playerTwo);
 console.log(result);
